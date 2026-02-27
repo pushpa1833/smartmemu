@@ -1,0 +1,4 @@
+- [x] Update Cartcontext.jsx to add removeFromCart and getTotal functions
+- [x] Update FoodCard.jsx to add onAddToCart prop and onClick handler
+- [x] Update Menu.jsx to use CartContext and pass addToCart to FoodCard
+- [x] Update Cart.jsx to fix image path, add total price, add remove buttons
