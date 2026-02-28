@@ -1,0 +1,487 @@
+.tracking-container {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tracking-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.tracking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tracking-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.back-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+.order-id-section {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.order-id-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.order-id-value {
+  font-weight: bold;
+  color: #667eea;
+  font-size: 16px;
+}
+
+.last-updated {
+  margin-left: auto;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Status Progress Bar */
+.status-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #888;
+  transition: all 0.3s;
+}
+
+.progress-step.active .step-circle {
+  background: #667eea;
+  color: white;
+}
+
+.progress-step.completed .step-circle {
+  background: #4caf50;
+  color: white;
+}
+
+.step-label {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+.progress-step.active .step-label {
+  color: #333;
+  font-weight: 600;
+}
+
+.progress-line {
+  flex: 1;
+  height: 4px;
+  background: #e0e0e0;
+  margin: 0 5px;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+
+.progress-line.active {
+  background: #4caf50;
+}
+
+/* Current Status */
+.current-status {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.cooking {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-badge.ready {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-message {
+  color: #666;
+  margin: 0;
+}
+
+/* Order Details */
+.order-details {
+  margin-bottom: 20px;
+}
+
+.order-details h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.details-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detail-label {
+  color: #666;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.payment-status.paid {
+  color: #4caf50;
+}
+
+.payment-status.pending {
+  color: #ff9800;
+}
+
+.payment-status.failed {
+  color: #f44336;
+}
+
+/* Order Items */
+.order-items {
+  margin-bottom: 20px;
+}
+
+.order-items h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.item-qty {
+  color: #666;
+  font-size: 14px;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #667eea;
+}
+
+/* Order Summary */
+.order-summary {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.summary-row.discount {
+  color: #4caf50;
+}
+
+.summary-row.final {
+  border-top: 2px solid #ddd;
+  margin-top: 8px;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+/* Auto Refresh */
+.auto-refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  font-size: 12px;
+}
+
+.refresh-icon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Loading & Error States */
+.loading-spinner {
+  text-align: center;
+  padding: 50px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.error-message {
+  text-align: center;
+  padding: 50px;
+}
+
+.error-message h2 {
+  color: #f44336;
+}
+
+.error-message .back-btn {
+  margin-top: 20px;
+  background: #667eea;
+  color: white;
+}
+
+.error-message .back-btn:hover {
+  background: #5568d3;
+}
+
+/* Cancel Button Section */
+.cancel-section {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cancel-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #856404;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.timer-icon {
+  font-size: 18px;
+}
+
+.cancel-timer strong {
+  color: #d32f2f;
+  font-size: 18px;
+}
+
+.cancel-order-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-order-btn:hover {
+  background: #c82333;
+  transform: scale(1.02);
+}
+
+.cancel-confirm {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.cancel-confirm p {
+  color: #333;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.confirm-yes-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirm-yes-btn:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.confirm-yes-btn:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.confirm-no-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirm-no-btn:hover:not(:disabled) {
+  background: #5a6268;
+}
+
+.confirm-no-btn:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.cancel-error {
+  color: #dc3545;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.cancel-success {
+  color: #28a745;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}

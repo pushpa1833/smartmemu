@@ -1,0 +1,115 @@
+/* Page center */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #522888 0%, #6b3fa0 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* Login box */
+.login-box {
+  background-color: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Heading */
+.login-box h2 {
+  color: #522888;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.login-box .subtitle {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* Labels */
+.login-box label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #522888;
+}
+
+/* Button */
+#login-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  background: linear-gradient(135deg, #522888 0%, #6b3fa0 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(82, 40, 136, 0.3);
+}
+
+#login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(82, 40, 136, 0.4);
+}
+
+/* Text & link */
+.login-box p {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.login-box a {
+  color: #522888;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.login-box a:hover {
+  color: #6b3fa0;
+  text-decoration: underline;
+}
+
+/* Forgot password */
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #522888;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}

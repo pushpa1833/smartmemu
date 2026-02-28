@@ -1,0 +1,474 @@
+/* ================= GLOBAL FIX ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* ================= CONTAINER ================= */
+.profile-container {
+  background: linear-gradient(135deg, #f5f7fa, #e4e8ec);
+  padding: 16px;
+  overflow-x: hidden;
+}
+
+/* ================= LOGIN REQUIRED ================= */
+.login-required {
+  max-width: 420px;
+  margin: 80px auto;
+  text-align: center;
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= PROFILE HEADER ================= */
+.profile-header {
+  background: linear-gradient(135deg, #522888, #6b3fa0);
+  border-radius: 14px;
+  padding: 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.profile-header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+}
+
+/* ================= AVATAR - BIGGER SIZE ================= */
+.profile-avatar-large,
+.profile-avatar-large-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.profile-avatar-large {
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.profile-avatar-large-placeholder {
+  background: #fff;
+  color: #522888;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ================= PROFILE INFO ================= */
+.profile-info h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.profile-info p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.profile-info .email,
+.profile-info .phone {
+  opacity: 0.95;
+}
+
+.profile-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 14px;
+  font-size: 13px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.25);
+  text-transform: capitalize;
+}
+
+/* ================= TABS ================= */
+.profile-tabs {
+  display: flex;
+  gap: 10px;
+  padding: 0 25px 20px;
+  flex-wrap: wrap;
+}
+
+.profile-tab-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.profile-tab-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.profile-tab-btn.active {
+  background: #fff;
+  color: #522888;
+}
+
+/* ================= CONTENT ================= */
+.profile-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  margin-top: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.profile-section-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ================= UPDATE MESSAGE ================= */
+.update-message {
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.update-message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.update-message.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+/* ================= EDIT FORM ================= */
+.edit-form {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #522888;
+}
+
+.form-group input.disabled-input {
+  background: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #666;
+}
+
+.edit-form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ================= INFO GRID ================= */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  background: #f8f8f8;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.info-card label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.info-card span {
+  display: block;
+  font-weight: 600;
+  margin-top: 4px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.account-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn.primary {
+  background: linear-gradient(135deg, #522888, #6b3fa0);
+  color: #fff;
+}
+
+.action-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(82, 40, 136, 0.4);
+}
+
+.action-btn.secondary {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.action-btn.secondary:hover {
+  background: #e0e0e0;
+}
+
+.action-btn.danger {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.action-btn.danger:hover {
+  background: #c0392b;
+}
+
+/* ================= ORDERS ================= */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-item {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px;
+  transition: all 0.3s ease;
+}
+
+.order-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.order-item-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.order-id {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.order-date {
+  font-size: 13px;
+  color: #666;
+}
+
+.order-status-badge,
+.payment-status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.pending {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.cancelled {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.paid {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.failed {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* ================= ORDER ITEM DETAILS ================= */
+.order-item-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.order-items-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.order-item-tag {
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.order-payment-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-method {
+  font-size: 12px;
+  color: #666;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-top: 12px;
+  border-top: 1px dashed #eee;
+}
+
+.order-total-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.order-total-amount {
+  font-size: 20px;
+  color: #522888;
+}
+
+/* ================= EMPTY / LOADING ================= */
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-data-icon {
+  font-size: 48px;
+}
+
+.no-data p {
+  color: #666;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.profile-loading {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 600px) {
+  .profile-avatar-large,
+  .profile-avatar-large-placeholder {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .profile-info h2 {
+    font-size: 20px;
+  }
+
+  .profile-info p {
+    font-size: 13px;
+  }
+
+  .profile-header-content {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .profile-content {
+    padding: 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .edit-form-buttons {
+    flex-direction: column;
+  }
+
+  .edit-form-buttons .action-btn {
+    width: 100%;
+  }
+}
